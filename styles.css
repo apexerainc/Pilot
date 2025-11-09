@@ -1,0 +1,121 @@
+:root {
+  color-scheme: light dark;
+  --primary: #0f3557;
+  --accent: #1ea6ff;
+  --bg: #f4f7fb;
+  --text: #1f2933;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(15, 53, 87, 0.1);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.hero .tagline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+main.container {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2.5rem 3.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.75rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 24px -16px var(--card-shadow);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+address {
+  font-style: normal;
+}
+
+.label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  margin: 0 0 0.75rem;
+}
+
+.card a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
+}
+
+.license-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.license-list li + li {
+  margin-top: 0.5rem;
+}
+
+footer {
+  background: #0b243a;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  main.container {
+    grid-template-columns: 1fr;
+  }
+}
